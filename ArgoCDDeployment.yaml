@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocdtest
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: argocdtest
+  template:
+    metadata:
+      labels:
+        app: argocdtest
+    spec:
+      containers:
+      - name: argocdtest-container
+        image: anishyadav2132/argocdtest:v1
+        ports:
+        - containerPort: 5000

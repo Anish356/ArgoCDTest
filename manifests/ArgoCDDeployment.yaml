@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: argocdtest-container
-        image: anishyadav2132/argocdtest:v1
+        image: anishyadav2132/argocdtest:v2
         ports:
         - containerPort: 5000
         readinessProbe:
